@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "852493870509",
+    "firebase_url": "https://loginp-f1a28.firebaseio.com",
+    "project_id": "loginp-f1a28",
+    "storage_bucket": "loginp-f1a28.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:852493870509:android:871af5b7a093f4d8ef2d24",
+        "android_client_info": {
+          "package_name": "com.example.login_page"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "852493870509-vm0j2999as5m53c7fuu4h39tinckm26e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmqJWXqNaBnIdqJ8136CidvypXXdUeU8Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "852493870509-vm0j2999as5m53c7fuu4h39tinckm26e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
