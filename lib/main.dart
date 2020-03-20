@@ -16,21 +16,37 @@ class MyApp extends StatelessWidget {
         RegistrationScreen.id: (context) => RegistrationScreen(),
 //          ChatScreen.id: (context) => ChatScreen(),
       },
-      home: Scaffold(
-        appBar: AppBar(
-            title: Center(
-              child: Text('Project Portpollio'),
-            ),
-            backgroundColor: Colors.blue),
-        backgroundColor: Colors.lightBlueAccent,
-        body: SafeArea(
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                CircleAvatar(
-                  radius: 50.0,
-                  backgroundImage: AssetImage("image/p.png"),
-                ),
+      home: HomePage(),
+    );
+  }
+}
+
+/// YOu were getting the error because you had included the Navigator directly
+/// in the MaterialApp(). The clear explanation is given in the following link.
+///
+/// [https://stackoverflow.com/questions/44004451/navigator-operation-requested-with-a-context-that-does-not-include-a-navigator]
+class HomePage extends StatelessWidget {
+  const HomePage({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+          title: Center(
+            child: Text('Project Portpollio'),
+          ),
+          backgroundColor: Colors.blue),
+      backgroundColor: Colors.lightBlueAccent,
+      body: SafeArea(
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage("image/p.png"),
+              ),
 //                Text(
 //                  "Dainy & Stalin Coutinho",
 //                  style: TextStyle(
@@ -64,26 +80,26 @@ class MyApp extends StatelessWidget {
 //                    style: TextStyle(fontSize: 20.0),
 //                  ),
 //                ),
-                RoundedButton(
-                  title: 'Log In',
-                  colour: Colors.lightBlueAccent,
-                  onPressed: () {
-                    Navigator.pushNamed(context, LoginScreen.id);
-                  },
-                ),
-                RoundedButton(
-                  title: 'Register',
-                  colour: Colors.blueAccent,
-                  onPressed: () {
-                    Navigator.pushNamed(context, RegistrationScreen.id);
-                  },
-                ),
-                SizedBox(
-                    height: 20.0,
-                    width: 150.0,
-                    child: Divider(
-                      color: Colors.teal.shade100,
-                    )),
+              RoundedButton(
+                title: 'Log In',
+                colour: Colors.lightBlueAccent,
+                onPressed: () {
+                  Navigator.pushNamed(context, LoginScreen.id);
+                },
+              ),
+              RoundedButton(
+                title: 'Register',
+                colour: Colors.blueAccent,
+                onPressed: () {
+                  Navigator.pushNamed(context, RegistrationScreen.id);
+                },
+              ),
+              SizedBox(
+                  height: 20.0,
+                  width: 150.0,
+                  child: Divider(
+                    color: Colors.teal.shade100,
+                  )),
 //                Card(
 //                  color: Colors.white,
 //                  margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25),
@@ -122,8 +138,7 @@ class MyApp extends StatelessWidget {
 //                    ),
 //                  ),
 //                ),
-              ]),
-        ),
+            ]),
       ),
     );
   }
