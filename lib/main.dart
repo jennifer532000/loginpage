@@ -10,6 +10,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      routes: {
+//          WelcomeScreen.id: (context) => WelcomeScreen(),
+        LoginScreen.id: (context) => LoginScreen(),
+        RegistrationScreen.id: (context) => RegistrationScreen(),
+//          ChatScreen.id: (context) => ChatScreen(),
+      },
       home: Scaffold(
         appBar: AppBar(
             title: Center(
@@ -78,44 +84,44 @@ class MyApp extends StatelessWidget {
                     child: Divider(
                       color: Colors.teal.shade100,
                     )),
-                Card(
-                  color: Colors.white,
-                  margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25),
-                  child: ListTile(
-                    leading: Icon(
-                      Icons.phone,
-                      color: Colors.teal,
-                    ),
-                    title: Text(
-                      '+91 953 566 9297 / +91 809 534 0253',
-                      style: TextStyle(
-                        fontFamily: 'SourceSansPro',
-                        fontSize: 14.0,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.teal,
-                      ),
-                    ),
-                  ),
-                ),
-                Card(
-                  color: Colors.white,
-                  margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25),
-                  child: ListTile(
-                    leading: Icon(
-                      Icons.email,
-                      color: Colors.teal,
-                    ),
-                    title: Text(
-                      'sdenterprises2122@gmail.com',
-                      style: TextStyle(
-                        fontFamily: 'SourceSansPro',
-                        fontSize: 15.0,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.teal,
-                      ),
-                    ),
-                  ),
-                ),
+//                Card(
+//                  color: Colors.white,
+//                  margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25),
+//                  child: ListTile(
+//                    leading: Icon(
+//                      Icons.phone,
+//                      color: Colors.teal,
+//                    ),
+//                    title: Text(
+//                      '+91 953 566 9297 / +91 809 534 0253',
+//                      style: TextStyle(
+//                        fontFamily: 'SourceSansPro',
+//                        fontSize: 14.0,
+//                        fontWeight: FontWeight.bold,
+//                        color: Colors.teal,
+//                      ),
+//                    ),
+//                  ),
+//                ),
+//                Card(
+//                  color: Colors.white,
+//                  margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25),
+//                  child: ListTile(
+//                    leading: Icon(
+//                      Icons.email,
+//                      color: Colors.teal,
+//                    ),
+//                    title: Text(
+//                      'sdenterprises2122@gmail.com',
+//                      style: TextStyle(
+//                        fontFamily: 'SourceSansPro',
+//                        fontSize: 15.0,
+//                        fontWeight: FontWeight.bold,
+//                        color: Colors.teal,
+//                      ),
+//                    ),
+//                  ),
+//                ),
               ]),
         ),
       ),
